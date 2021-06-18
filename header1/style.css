@@ -1,0 +1,28 @@
+:root {
+  --header-height: 80px;
+  --header-width: 100%;
+  --header-color: rgb(64, 64, 248);
+  --header-logo-height: 60px;
+  --header-logo-width: 60px;
+}
+
+header {
+  height: var(--header-height);
+  width: var(--header-width);
+  background-color: var(--header-color);
+}
+
+header .logo {
+  height: var(--header-logo-height);
+  width: var(--header-logo-width);
+  background-color: transparent;
+  overflow: hidden;
+  margin-left: 20px;
+  padding: 10px;
+}
+
+header .logo img {
+  height: inherit;
+  width: inherit;
+}
+/*# sourceMappingURL=style.css.map */
