@@ -41,7 +41,7 @@ header {
         margin-top: 5px;
     }
 
-    .navmenu-hampburger{
+    .navmenu-hamburger{
         display: none;
         height: 50px;
         width: 60px;
@@ -147,6 +147,34 @@ button {
     color: var(--header-navmenu-text-color-hover);
 }
 
+.animated-bar_45{
+    animation: bar_45 1s;
+    animation-fill-mode: forwards;
+}
+
+.animated-bar_-45{
+    animation: bar_-45 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes bar_45 {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(45deg);
+    }
+}
+
+@keyframes bar_-45 {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(-45deg);
+    }
+}
+
 @media only screen and (max-width: 800px) {
     header {
         height: auto;
@@ -157,7 +185,7 @@ button {
         .logo{
             margin: 0;
         }
-        .navmenu-hampburger{
+        .navmenu-hamburger{
             display: flex;
         }
         nav {

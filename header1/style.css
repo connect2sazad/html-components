@@ -44,7 +44,7 @@ header .brand-name {
   margin-top: 5px;
 }
 
-header .navmenu-hampburger {
+header .navmenu-hamburger {
   display: none;
   height: 50px;
   width: 60px;
@@ -64,14 +64,14 @@ header .navmenu-hampburger {
   cursor: pointer;
 }
 
-header .navmenu-hampburger .barline {
+header .navmenu-hamburger .barline {
   height: 3px;
   width: 70%;
   background-color: white;
   margin-bottom: 10px;
 }
 
-header .navmenu-hampburger .barline:last-child {
+header .navmenu-hamburger .barline:last-child {
   margin: 0;
 }
 
@@ -185,6 +185,64 @@ button {
   color: var(--header-navmenu-text-color-hover);
 }
 
+.animated-bar_45 {
+  -webkit-animation: bar_45 1s;
+          animation: bar_45 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.animated-bar_-45 {
+  -webkit-animation: bar_-45 1s;
+          animation: bar_-45 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes bar_45 {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+}
+
+@keyframes bar_45 {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+}
+
+@-webkit-keyframes bar_-45 {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+}
+
+@keyframes bar_-45 {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+}
+
 @media only screen and (max-width: 800px) {
   header {
     height: auto;
@@ -203,7 +261,7 @@ button {
   header .logo {
     margin: 0;
   }
-  header .navmenu-hampburger {
+  header .navmenu-hamburger {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
