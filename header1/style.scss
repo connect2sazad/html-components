@@ -1,18 +1,24 @@
-:root{
+:root {
     --header-height: 80px;
     --header-width: 100%;
     --header-color: rgb(64, 64, 248);
     --header-logo-height: 60px;
     --header-logo-width: 60px;
-
+    --header-brandname-font-size: 25px;
+    --header-brandname-font-family: "Courier New", Courier, monospace;
+    --header-brandname-color: white;
+    --header-navmenu-text-color: white;
+    --header-navmenu-text-color-hover: #ffffff50;
+    --header-navmenu-font-size: 20px;
 }
-header{
+header {
     height: var(--header-height);
     width: var(--header-width);
     background-color: var(--header-color);
+    display: flex;
 
     // logo
-    .logo{
+    .logo {
         height: var(--header-logo-height);
         width: var(--header-logo-width);
         background-color: transparent;
@@ -20,9 +26,73 @@ header{
         margin-left: 20px;
         padding: 10px;
 
-        img{
+        img {
             height: inherit;
             width: inherit;
         }
     }
+
+    .brand-name {
+        font-size: var(--header-brandname-font-size);
+        font-family: var(--header-brandname-font-family);
+        color: var(--header-brandname-color);
+        font-weight: bolder;
+        padding: 20px;
+        margin-top: 5px;
+    }
+
+    nav {
+        height: 100%;
+        width: max-content;
+        margin-left: auto;
+        order: 2;
+        margin-right: 30px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        ul {
+            height: inherit;
+            width: max-content;
+            margin-right: 20px;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            li {
+                margin-left: 15px;
+                &:first-child {
+                    margin: 0;
+                }
+                a {
+                    color: var(--header-navmenu-text-color);
+                    font-size: var(--header-navmenu-font-size);
+                    text-decoration: none;
+                    transition: 1s ease;
+                    &:hover {
+                        color: var(--header-navmenu-text-color-hover);
+                        transition: color 500ms linear;
+                    }
+                }
+            }
+        }
+
+        .special-button{
+            margin-left: 10px;
+        }
+    }
+}
+
+button{
+    all: unset;
+    padding: 7px;
+    border: 1px solid white;
+    border-radius: 8px;
+    color: white;
+}
+
+.active-menu{
+    color: var(--header-navmenu-text-color-hover);
 }
