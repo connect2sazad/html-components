@@ -12,7 +12,7 @@ define("INDEX", COMPONENT . "/index.html");
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="1">
+    <!-- <meta http-equiv="refresh" content="1"> -->
     <title>Document</title>
     <style>
         html,
@@ -22,6 +22,7 @@ define("INDEX", COMPONENT . "/index.html");
             box-sizing: border-box;
             padding: 0;
             margin: 0;
+            transition: none!important;
             -webkit-transition: none !important;
             -moz-transition: none !important;
             -ms-transition: none !important;
@@ -29,6 +30,8 @@ define("INDEX", COMPONENT . "/index.html");
         }
     </style>
     <link rel="stylesheet" href="<?php echo HTML_COMPONENT; ?>style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="<?php echo HTML_COMPONENT; ?>script.js"></script>
 </head>
 
 <body>

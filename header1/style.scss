@@ -41,6 +41,29 @@ header {
         margin-top: 5px;
     }
 
+    .navmenu-hampburger{
+        display: none;
+        height: 50px;
+        width: 60px;
+        overflow: none;
+        border: 2px solid white;
+        border-radius: 8px;
+        // display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        .barline{
+            height: 3px;
+            width: 70%;
+            background-color: white;
+            margin-bottom: 10px;
+            &:last-child{
+                margin: 0;
+            }
+        }
+    }
+
     nav {
         height: 100%;
         width: max-content;
@@ -79,20 +102,83 @@ header {
             }
         }
 
-        .special-button{
-            margin-left: 10px;
+        .special-button {
+            height: fit-content;
+            width: max-content;
+            padding: 2px;
+            button {
+                font-weight: bolder;
+
+                color: #fff;
+                background-color: transparent;
+                border-color: white;
+
+                &:hover {
+                    background-color: white;
+                    color: var(--header-color);
+                }
+            }
         }
     }
 }
 
-button{
+button {
     all: unset;
-    padding: 7px;
-    border: 1px solid white;
-    border-radius: 8px;
-    color: white;
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    cursor: pointer;
 }
 
-.active-menu{
+.active-menu {
     color: var(--header-navmenu-text-color-hover);
+}
+
+@media only screen and (max-width: 800px) {
+    header {
+        height: auto;
+        padding-bottom: 20px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .logo{
+            margin: 0;
+        }
+        .navmenu-hampburger{
+            display: flex;
+        }
+        nav {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            order: 0;
+            ul {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                li{
+                    margin: 0;
+                    margin-top: 15px;
+                }
+            }
+        }
+        .special-button{
+            margin: auto;
+        }
+    }
 }
